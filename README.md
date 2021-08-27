@@ -31,14 +31,6 @@ ________________________________________________________________________________
 </p>
 
 _________________________________________________________________________________________________________________________
-# Exercise 
-
-The app will generate sentence where you have to choose the correct declension of the missing word
-
-
-![exercise](https://user-images.githubusercontent.com/75533746/131010242-a3753d94-0f28-4383-9d30-3e371cbc7da7.gif)
-
-_________________________________________________________________________________________________________________________
 
 <p align="center">
   <img src="https://github.com/Oltda/czech-declensions/blob/main/static/images/Slide7.JPG">
@@ -52,10 +44,11 @@ ________________________________________________________________________________
 
 _________________________________________________________________________________________________________________________
 
-<p align="center">
-  <img src="https://github.com/Oltda/czech-declensions/blob/main/static/images/Slide9.JPG">
-</p>
+# Exercise 
+
+The app will generate sentence where you have to choose the correct declension of the missing word
 
 
+![exercise](https://user-images.githubusercontent.com/75533746/131010242-a3753d94-0f28-4383-9d30-3e371cbc7da7.gif)
 
 
