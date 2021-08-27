@@ -14,7 +14,7 @@ Technology used:</br>
 # Creating Folders
 
 <p align="center">
-  <img style="width: 60%; height: 60%;" src="https://github.com/Oltda/declinate-it/blob/master/static/images/Slide2.JPG">
+  <img style="width: 300px; height:300px;" src="https://github.com/Oltda/declinate-it/blob/master/static/images/Slide2.JPG">
 </p>
 
 _________________________________________________________________________________________________________________________
