@@ -32,19 +32,19 @@ ________________________________________________________________________________
 
 
 <p align="center">
-  <img src="https://github.com/Oltda/declinate-it/blob/main/static/images/Slide6.JPG">
+   <img src="https://github.com/Oltda/declinate-it/blob/master/static/images/Slide6.JPG">
 </p>
 
 _________________________________________________________________________________________________________________________
 
 <p align="center">
-  <img src="https://github.com/Oltda/declinate-it/blob/main/static/images/Slide7.JPG">
+   <img src="https://github.com/Oltda/declinate-it/blob/master/static/images/Slide7.JPG">
 </p>
 
 _________________________________________________________________________________________________________________________
 
 <p align="center">
-  <img src="https://github.com/Oltda/declinate-it/blob/main/static/images/Slide8.JPG">
+  <img src="https://github.com/Oltda/declinate-it/blob/master/static/images/Slide8.JPG">
 </p>
 
 _________________________________________________________________________________________________________________________
