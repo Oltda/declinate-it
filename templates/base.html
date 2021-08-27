@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}">
+    <script src="https://kit.fontawesome.com/24a527e4a1.js" crossorigin="anonymous"></script>
+
+
+     {% block head %}{% endblock %}
+</head>
+
+<body>
+
+
+
+<div id="navBar">
+
+    <div class="barLink first">
+        <image src="/static/images/logo3.png" id="logoNavb">
+    </div>
+
+
+    <div class="barLink" id="home">
+    <font size="3"><i class="fas fa-home folderIcon"></i></font>
+    <a href="{{url_for('index')}}">Home</a>
+    </div>
+
+
+    <div class="barLink folIc" id="barNewFold" onclick="showInputField(this)">
+      <font class="folIc" size="3"><i class="fas fa-folder-plus folderIcon folIc"></i></font>
+      <span class="folIc">New folder</span>
+
+
+    </div>
+
+    <div class="barLink disab nWIc" id="barNewWord" onclick="showEntryForm(this)">
+      <font class="nWIc" size="3"><i class="fas fa-book folderIcon nWIc"></i></font>
+        <span class="nWIc" >Add Word</span>
+    </div>
+
+
+    <div class="barLink disab" id="userFolders" onclick="showFolderMenu(this)">
+      <font size="3"><i id="userfoldersIcon" class="fas fa-folder folderIcon"></i></font>
+        <span id="userfoldersSpan">My Folders</span>
+    </div>
+
+    <div id="logout" class="barLink logout">
+      <font size="3"><i class="fas fa-door-open folderIcon"></i></font>
+      <a href="{{url_for('logout')}}">Logout</a>
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+<br>
+
+<div id="folderMenuWrap">
+
+    <ul id="folderMenu">
+      {% for element in all_user_folders %}
+
+      <li class="folderLink"><a class="folderUrl" href="{{ url_for('myvocab', folder=element.folder_name) }}">{{element.folder_name}}</a></li>
+
+      {% endfor %}
+
+    </ul>
+
+</div>
+
+
+<script>
+
+      var viewport = document.querySelector("meta[name=viewport]");
+      viewport.setAttribute("content", viewport.content + ", height=" + window.innerHeight);
+
+</script>
+
+
+
+  {% block content %}{% endblock %}
+</body>
+
+</html>

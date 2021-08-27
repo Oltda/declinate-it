@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}">
+        <script src="https://kit.fontawesome.com/24a527e4a1.js" crossorigin="anonymous"></script>
+          {% extends "base.html" %}
+</head>
+
+
+
+
+<body>
+{% block content %}
+
+
+
+
+
+
+
+
+
+
+
+  {% with messages = get_flashed_messages() %}
+  {% if messages %}
+
+    {% for message in messages %}
+<div id="message">
+
+  <span>{{message}}</span>
+
+</div>
+    {% endfor %}
+
+    {% endif %}
+    {% endwith %}
+
+<br>
+
+
+
+
+<div id="instruction" onclick="instructions()">
+      <div id="instrSlide">
+        <div id="instText">
+            <p id="instP"><span class="welcome">Hi {{user}}, welcome to Czech declensions!</span></p>
+        </div>
+
+          <div  id="nextInfo">
+            <font size="8"><i class="far fa-arrow-alt-circle-right"></i></font>
+          </div>
+      </div>
+</div>
+
+
+
+<div id="noDeclensionsFound">
+    No declensions found. Please fill them in the form manually.
+</div>
+
+
+
+<form class="hidden isWF" id="deklinator" action="/home" method="post">
+  <input id="declinatedWord" type="hidden" name="vyber" value="">
+  <input id="declinatedWordEng" type="hidden" name="anglicky" value="">
+
+  <input id="chosenGender" type="hidden" name="ChGend" value="">
+  <input id="chosenClass" type="hidden" name="ChClass" value="">
+  <input id="chosenFolder" type="hidden" name="ChFolder" value="">
+
+  <input class="isWF" id="deklinatorBtn" name="submit_decl" type="submit" value="Declinate">
+</form>
+
+
+
+
+<div id="formWrapper">
+
+
+
+
+    <div id="firstFormWrap" class="entryFormWrap isFF">
+
+                      <form class="hiddenFolder" id="folderTextImput" action="/home" method="post">
+
+                      <p>
+                        <span class="formLabels">Folder Name:</span>
+                      </p>
+                      <p>
+                        <input id="folder_name" name="slozka_jmeno" type="text" value="" class="isFF">
+                      </p>
+
+                      <p id="folderSubmitBtn">
+                          <input id="submit_folder" name="submit_decl" type="submit" value="Add folder" class="isFF">
+                      </p>
+
+                      </form><br>
+      </div>
+
+      <div id="secondFormWrap" class="entryFormWrap isWF">
+
+
+
+          <form class="formEntry hiddenFolder" id="entryForm" action="/home" method="post">
+
+            <div class="formBasicInf">
+            {{ form.hidden_tag() }}
+
+
+          {{ form.foldersHidden(size=20) }}
+            <p>
+
+              <span class="formLabels"><label for="folders">Folder:</label></span><br>
+              <select id="folders" name="folders">
+
+                <option class="folderOption" selected>...</option>
+
+                {% for element in all_user_folders %}
+
+
+                <option class="folderOption" value="{{element.folder_name}}">{{element.folder_name}}</option>
+
+                {% endfor %}
+
+              </select>
+
+
+
+            <p class="engCzEntry">
+              <span class="formLabels">{{ form.czech_entry.label }}</span><br>
+              {{ form.czech_entry(size=20,) }}
+            </p>
+            <p class="engCzEntry">
+              <span class="formLabels">{{ form.english_entry.label }}</span><br>
+              {{ form.english_entry(size=20) }}
+            </p>
+
+            <p id="slovDruh">
+              <span class="formLabels">{{ form.word_class.label }}</span><br>
+              {{ form.word_class}}
+            </p>
+
+
+
+
+        </div>
+          <br>
+
+
+
+
+
+              <div id="nounsCases">
+
+                <p id="genderOptions"> {{form.noun_gender.label}}<br>
+                  {{form.noun_gender}}
+                </p>
+
+                  <div class="nounsColumn">
+                    <h3>Singular</h3>
+                    <p>
+                      {{form.noun_nominative.label}}<br>
+                      {{form.noun_nominative(class_="deklinace")}}
+                    </p>
+
+                    <p>
+                      {{form.noun_genitive.label}}<br>
+                      {{form.noun_genitive(class_="deklinace")}}
+                    </p>
+
+                    <p>
+                      {{form.noun_dative.label}}<br>
+                      {{form.noun_dative(class_="deklinace")}}
+                    </p>
+
+                    <p>
+                      {{form.noun_accusative.label}}<br>
+                      {{form.noun_accusative(class_="deklinace")}}
+                    </p>
+
+                    <p>
+                      {{form.noun_vocative.label}}<br>
+                      {{form.noun_vocative(class_="deklinace")}}
+                    </p>
+
+                    <p>
+                      {{form.noun_locative.label}}<br>
+                      {{form.noun_locative(class_="deklinace")}}
+                    </p>
+
+                    <p>
+                      {{form.noun_instrumental.label}}<br>
+                      {{form.noun_instrumental(class_="deklinace")}}
+                    </p>
+                  </div>
+
+                  <div class="nounsColumn">
+                    <h3>Plural</h3>
+                    <p>
+                      {{form.noun_pl_nominative.label}}<br>
+                      {{form.noun_pl_nominative(class_="deklinacePlu")}}
+                    </p>
+
+                    <p>
+                      {{form.noun_pl_genitive.label}}<br>
+                      {{form.noun_pl_genitive(class_="deklinacePlu")}}
+                    </p>
+
+                    <p>
+                      {{form.noun_pl_dative.label}}<br>
+                      {{form.noun_pl_dative(class_="deklinacePlu")}}
+                    </p>
+
+                    <p>
+                      {{form.noun_pl_accusative.label}}<br>
+                      {{form.noun_pl_accusative(class_="deklinacePlu")}}
+                    </p>
+
+                    <p>
+                      {{form.noun_pl_vocative.label}}<br>
+                      {{form.noun_pl_vocative(class_="deklinacePlu")}}
+                    </p>
+
+                    <p>
+                      {{form.noun_pl_locative.label}}<br>
+                      {{form.noun_pl_locative(class_="deklinacePlu")}}
+                    </p>
+
+                    <p>
+                      {{form.noun_pl_instrumental.label}}<br>
+                      {{form.noun_pl_instrumental(class_="deklinacePlu")}}
+                    </p>
+                </div>
+          </div>
+
+
+
+            <p id="entrySubmitBtn" >{{ form.submit() }}</p>
+          </form>
+
+
+
+    </div>
+</div>
+
+
+
+
+<br>
+
+
+
+
+
+
+
+<div id="vocInfoCont">
+  <input type="text" id="searchBox" onkeyup="searchWord()" placeholder="Search for a vocab.." title="Type in a vocab">
+  <br>
+
+    <div id="vocabHead">  <p>Czech</p> <p>English</p></div>
+        <div id="VocabCont">
+
+
+                <table id="czVocabulary">
+
+                {% for item in range(word_info_list|length) %}
+
+                {% set slovo = word_info_list[item]['entryCz'] %}
+                {% set word = word_info_list[item]['entryEn'] %}
+                {% set wordID = word_info_list[item]['idNumber'] %}
+                <tr class="rowVoc">
+
+                    <td onclick="showInfo(this)" class="czEnWord">{{slovo}}<i class="fas fa-info-circle"></i></td>
+
+
+                    <td onclick="toggleEditDel(this)" class="EnWord">{{word}}
+
+                    </td>
+
+
+                    <td onclick="showEditDel(this)" class="delColumn">
+
+
+                      <div class="kos hide">
+                              <a class="vymazIc" href="/delete/{{wordID}}">
+                                  <font size="5"><i class="fas fa-trash-alt"></i></font>
+                              </a>
+
+                                <i class="fas fa-ellipsis-v threeDots"></i>
+
+                              <a class="upravIc" href="/edit/{{wordID}}">
+                                  <font size="5"><i class="far fa-edit"></i></font>
+                              </a>
+                      </div>
+                    </td>
+
+
+                </tr>
+
+                {% endfor %}
+                </table>
+
+          </div>
+
+
+
+          <table id="infoTable">
+            <caption id="infoCaption"></caption>
+
+
+            <tr>
+              <th class="wordInf">Case</th>
+              <th class="wordInf">Singular</th>
+              <th class="wordInf">Plural</th>
+            </tr>
+            <tr class="infoRow">
+              <td class="wordInf">Nom</td>
+              <td class="wordInf filled"></td>
+              <td class="wordInf filled"></td>
+            </tr>
+            <tr class="infoRow">
+              <td class="wordInf">Gen</td>
+              <td class="wordInf filled"></td>
+              <td class="wordInf filled"></td>
+            </tr>
+            <tr class="infoRow">
+              <td class="wordInf">Dat</td>
+              <td class="wordInf filled"></td>
+              <td class="wordInf filled"></td>
+            </tr>
+            <tr class="infoRow">
+              <td class="wordInf">Acc</td>
+              <td class="wordInf filled"></td>
+              <td class="wordInf filled"></td>
+            </tr>
+            <tr class="infoRow">
+              <td class="wordInf">Voc</td>
+              <td class="wordInf filled"></td>
+              <td class="wordInf filled"></td>
+            </tr>
+            <tr class="infoRow">
+              <td class="wordInf">Loc</td>
+              <td class="wordInf filled"></td>
+              <td class="wordInf filled"></td>
+            </tr>
+            <tr class="infoRow">
+              <td class="wordInf">Ins</td>
+              <td class="wordInf filled"></td>
+              <td class="wordInf filled"></td>
+            </tr>
+
+          </table>
+
+
+</div>
+
+
+
+
+<image src="/static/images/prague.png" class="pragueSil index">
+
+
+
+<script>
+
+var unordArray = {{unordered_cz_en_list | tojson}};
+
+var arrayOfCzVoc = {{list_cz_voc | tojson}};
+
+var arrayWordInfo = {{word_info_list | tojson}};
+
+var declensioList = {{list_of_declensions | tojson}};
+
+var czEnInitialDict = {{initial_entry | tojson}};
+
+console.log(czEnInitialDict)
+
+</script>
+
+
+
+
+<script src="static/js/index.js"></script>
+
+
+
+{% endblock %}
+
+
+</body>
+
+</html>

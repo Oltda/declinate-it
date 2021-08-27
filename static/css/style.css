@@ -1,0 +1,1516 @@
+/* LOGIN page----------------------- */
+
+#message.login{
+    position: relative;
+    top: 0px;
+    width: 100%;
+    display: flex;
+    vertical-align: middle;
+    font-size: 18px;
+    background: #ffb6c1;
+    color: #b3001b;
+    border: 1px solid #ffb6c1;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+
+#message.login span{
+  display: block;
+  margin: 0 auto;
+  font-family: Helvetica;
+}
+
+
+
+
+
+
+
+
+
+#loginWrapper{
+
+  display: block;
+  margin: 0 auto;
+  width: 30%;
+
+  min-width: 250px;
+}
+
+
+#flag{
+display: block;
+margin: 0 auto;
+
+}
+
+
+
+
+.pragueSil{
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
+  z-index: -1;
+}
+
+.pragueSil.index{
+  display: none;
+}
+
+
+#intialLogin{
+  font-family: Helvetica;
+  position: relative;
+  width: 100%;
+  min-height: 250px;
+  min-width: 250px;
+  padding-top: 7%;
+  display: flex;
+  justify-content: center;
+  background: #f5f5f5;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  top: 70%;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-bottom: 30%;
+}
+
+#submitNewUser{
+  display: block;
+  position: relative;
+  background-color: #46d246;
+  border: none;
+
+  width: 100%;
+  height: 40px;
+
+  /*padding: 12px 70px;*/
+  text-align: center;
+  vertical-align: middle;
+  line-height: 40px;
+  font-size: 15px;
+  cursor: pointer;
+  margin-bottom: 30px;
+  text-decoration: none;
+  color: white;
+}
+
+
+
+#submitNewUser:hover{
+  background-color: #28a428;
+  font-weight: bold;
+}
+
+
+#loginContent{
+width: 55%;
+height: 100%;
+padding-top: 10px;
+padding-left: 5px;
+padding-right: 5px;
+}
+
+
+#submit.submitLogin{
+  width: 100%;
+  font-family: Helvetica;
+  background: #4781eb;
+  margin-bottom: 10px;
+}
+
+
+#submit.submitLogin:hover{
+  background: #8db0f2;
+}
+
+.loginField{
+
+  width: 95%;
+  font-size: 18px;
+
+  font-family: Helvetica;
+
+}
+
+#username, #password, #email, #password2{
+  margin-top: 10px;
+  border: none;
+  border-bottom: 1px solid #808080;
+  outline: none;
+  width: 100%;
+  background: #f5f5f5;
+}
+
+
+
+
+
+
+#logoNavb{
+  position: relative;
+
+  top: -10px;
+  left: 0%;
+  width: 80px;
+  height: 80px;
+}
+
+
+.first{
+  margin-left: 1%;
+}
+
+
+
+/* index page----------------------- */
+
+
+#instruction{
+  padding: 5px;
+  display: none;
+  width: 40%;
+  height: 60%;
+  min-width: 400px;
+  min-height: 330px;
+  position: absolute;
+  margin-top: 5%;
+  left: 50%;
+  top: 20%;
+  transform: translateX(-50%);
+  overflow: hidden;
+
+}
+
+#instrSlide{
+  position: relative;
+  height: 90%;
+  width: 90%;
+  padding-top: 5%;
+  min-height: 300px;
+  background: #99ccff;
+  transition: all 0.4s ease;
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px grey;
+  font-family: Helvetica;
+  font-size: 18px;
+}
+
+#instP{
+  text-align: center;
+  font-weight: bold;
+  font-size: 19px;
+}
+
+.welcome{
+  font-size: 22px;
+  margin-right: 5px;
+  font-weight: bold;
+}
+
+
+
+.highlight i{
+  color: #00bfff;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+
+.highlight span{
+position: relative;
+top: -50%;
+}
+
+
+#nextInfo{
+  position: relative;
+  display: block;
+  margin: 0 auto;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+}
+
+#nextInfo:hover{
+  color: white;
+}
+
+
+#instText{
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  padding-left: 5%;
+  height: 60%;
+  width: 80%;
+  vertical-align: middle;
+  line-height: 100%;
+  background: #99ccff;
+
+  line-height: 30px;
+  text-align: left;
+}
+
+#instText p{
+  position: relative;
+  top: 40%;
+  transform: translateY(-50%);
+}
+
+
+#verbPersons{
+    display: none;
+    width: 40%;
+    min-width: 450px;
+    padding: 1%;
+    border: 1px solid black;
+}
+
+
+
+.personsColumn{
+  height: 30%;
+  width: 35%;
+  min-width: 200px;
+  margin-left: 10px;
+  border: 1px solid green;
+  padding: 1%;
+  display: inline-block;
+}
+
+.inputLabel{
+  width: 100%;
+}
+
+
+
+
+#formWrapper{
+  position: relative;
+  margin-top: 100px;
+  margin-left: 10%;
+  width: 40%;
+  min-width: 550px;
+
+}
+
+
+.formBasicInf{
+  position: relative;
+  width: 80%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.formLabels{
+  font-weight: bold;
+  font-size: 19px;
+  margin-bottom: 10px;
+}
+
+#folders, #czech_entry, #english_entry, #word_class{
+  margin-top: 5px;
+}
+
+
+.engCzEntry{
+  display: inline-block;
+  margin-right: 10px;
+}
+
+#engCzEntryWrapper{
+
+
+}
+
+
+.entryFormWrap{
+  width: 100%;
+}
+
+#nounsCases, #adjCases, #pronCases{
+    display: none;
+
+    width: 40%;
+    min-width: 450px;
+    position: relative;
+    padding-top: 5px;
+    border-top: 1px solid #ddd;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#genderOptions{
+  font-size: 20px;
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+/* dropdown folders */
+#noun_gender{
+  margin-top: 10px;
+}
+
+/* dropdown folders */
+#folders{
+  width: 100px;
+  border: 1px solid #ddd;
+}
+
+
+.nounsColumn, .adjColumn, .pronColumn{
+  height: 30%;
+  width: 35%;
+  min-width: 200px;
+  margin-left: 10px;
+
+  padding: 1%;
+  display: inline-block;
+}
+
+#entryForm{
+
+width: 100%;
+padding: 2%;
+min-width: 400px;
+box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+background: #fffff0;
+}
+
+#noun_nominative, #noun_genitive, #noun_dative, #noun_accusative, #noun_vocative, #noun_locative, #noun_instrumental,
+#noun_pl_nominative, #noun_pl_genitive, #noun_pl_dative, #noun_pl_accusative, #noun_pl_vocative, #noun_pl_locative, #noun_pl_instrumental,
+#czech_entry, #english_entry, #word_class{
+
+  border: 1px solid #ddd;
+}
+
+#entrySubmitBtn{
+  position: relative;
+  width: 100px;
+  left: 70%;
+}
+
+
+#submit{
+background-color: #46d246;
+border: none;
+color: white;
+padding: 12px 30px;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+font-size: 15px;
+cursor: pointer;
+}
+
+
+#submit:hover, #submit_folder:hover{
+    background-color: #28a428;
+    font-weight: bold;
+}
+
+
+
+
+
+
+
+
+
+.folderHeading{
+position: relative;
+left: 20%;
+margin-top: 10%;
+width: 62%;
+height: 10%;
+text-align: center;
+font-family: Helvetica;
+color: #666666;
+}
+
+
+
+#answersContainer{
+display: flex;
+border-top: 1px solid #bfbfbf;
+flex-wrap: wrap;
+align-items: center;
+justify-content: center;
+position: relative;
+padding-top: 5%;
+height: 20%;
+transition: all 0.8s ease;
+}
+
+
+#answersContainer.roi{
+  pointer-events: none;
+}
+
+.answerOption{
+border-radius: 15px;
+cursor: pointer;
+min-width: 60px;
+height: 40px;
+vertical-align: middle;
+line-height: 40px;
+border: 1px solid #bfbfbf;
+padding-left: 5px;
+padding-right: 5px;
+margin: 2%;
+text-align: center;
+box-shadow: 5px 5px 5px #808080;
+transition: background 0.4s ease;
+}
+
+.answerOption:hover{
+
+  background: #dcdcdc;
+}
+
+.green{
+  background: #65e765;
+}
+
+.green:hover{
+  background: #65e765;
+}
+
+
+
+.red{
+  background: #65e765;
+}
+
+.red:hover{
+  background: #65e765;
+}
+
+
+#incorrectNotif{
+opacity: 0;
+transition: all 1s ease;
+left: 19%;
+width: 62%;
+background: #f2738c;
+margin-bottom: 20px;
+font-family: sans-serif;
+position: relative;
+text-align: center;
+border-radius: 15px;
+font-size: 22px;
+vertical-align: middle;
+line-height: 40px;
+box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+
+#practiceCont{
+display: block;
+position: relative;
+width: 100%;
+height: 20%;
+padding-top: 2%;
+font-size: 22px;
+text-align: center;
+border-bottom: 1px solid #bfbfbf;
+transition: all 0.8s ease;
+}
+
+#czechPart{
+display: block;
+position: relative;
+padding-top: 2%;
+padding-bottom: 2%;
+width: 100%;
+height: 20%;
+font-size: 22px;
+text-align: center;
+background: #b3d9ff;
+border-radius: 10px;
+transition: all 0.8s ease;
+margin-top: 2%;
+margin-bottom: 2%;
+}
+
+
+
+
+#czechPart.green{
+  background: #65e765;
+}
+
+#writtenAnsCont{
+margin-top: 10px;
+display: none;
+}
+
+#writtenAnswer{
+  background-repeat: no-repeat;
+  border: 1px solid #bfbfbf;
+  border-radius: 10px;
+  height: 40px;
+  margin-right: 10px;
+}
+
+#writtenAnswer:focus{
+  border-radius: 10px;
+  border: 1px solid #bfbfbf;
+  background: #e6f2ff;
+  outline: none;
+}
+
+#checkWrittenAns{
+height: 40px;
+width: 50px;
+background: #3399ff;
+color: white;
+border-radius: 10px;
+border: none;
+cursor: pointer;
+outline: none;
+}
+
+#checkWrittenAns:hover{
+  background: #0080ff;
+  box-shadow: 5px 5px 10px #888888;
+  font-weight: bold;
+
+}
+
+
+#allCont{
+padding: 1%;
+position: relative;
+left: 50%;
+transform: translateX(-50%);
+border-radius: 15px;
+width: 60%;
+height: 50%;
+min-height: 400px;
+overflow: hidden;
+box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+font-family: sans-serif;
+margin-bottom: 100px;
+}
+
+
+#allCont.noWords{
+  min-height: 100px;
+  height: 100px;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 100px;
+  font-size: 20px;
+  background: #d3d3d3;
+  font-weight: bold;
+  color: #4d4d4d;
+}
+
+
+
+#nextQWrap{
+  position: relative;
+  width: 100%;
+  height: 60px;
+  margin-top: 10px;
+}
+
+#nextQuest{
+position: relative;
+display: none;
+width: 50px;
+height: 50px;
+left: 50%;
+transform: translateX(-50%);
+top: 1%;
+margin-top: 0%;
+border-radius: 50px;
+align-items: center;
+justify-content: center;
+}
+
+
+#nextQuest:hover{
+  color: gray;
+  cursor: pointer;
+}
+
+
+
+
+
+
+#navBar{
+  list-style-type: none;
+  position:absolute;
+  height: 60px;
+  width: 100%;
+  min-width: 750px;
+  margin: 0;
+  padding: 0;
+  background: #0c2027;
+  overflow: hidden;
+
+}
+
+
+.barLink{
+  float: left;
+}
+
+.barLink a{
+  color: white;
+  text-decoration: none;
+}
+
+
+
+
+#userFolders, #barNewFold, #barNewWord, #home{
+
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 10px;
+  color: white;
+  width: 110px;
+  height: 100%;
+  cursor: pointer;
+}
+
+
+
+
+
+#home{
+  display: none;
+}
+
+#home.visible{
+  display: block;
+}
+
+
+#userFolders:hover, #barNewFold:hover, #barNewWord:hover, #logout:hover, #home:hover{
+
+  background: #737373;
+}
+
+#userFolders.highlight, #barNewFold.highlight, #barNewWord.highlight, #home.highlight{
+
+  font-size: x-large;
+  width: 200px;
+  height: 25px;
+  color: #00bfff;
+  line-height: 25px;
+  vertical-align: middle
+
+}
+
+
+
+#barNewFold.clicked, #userFolders.clicked, #barNewWord.clicked{
+background: #737373;
+font-weight: bold;
+}
+
+
+
+
+
+.disab{
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+
+.logout{
+  position: absolute;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  color: white;
+  width: 100px;
+  height: 100%;
+  cursor: pointer;
+  right: 0%;
+
+}
+
+#folderMenuWrap{
+  display: none;
+  position: absolute;
+  width: 190px;
+  padding: 0;
+  max-height: 600px;
+  top: 80px;
+  right: 10%;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  z-index: 1200;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  background: #12303b;
+  font-family: Helvetica;
+}
+
+#folderMenuWrap.show{
+  display: block;
+}
+
+
+
+#folderMenu{
+margin-top: 0;
+margin-left: 0;
+list-style-type: none;
+padding-left: 0;
+position: relative;
+width: 140px;
+background: #12303b;
+}
+
+
+
+
+
+.folderLink a{
+
+  display: inline-block;
+  width: 100%;
+
+  color: white;
+  padding: 14px 16px;
+  text-decoration: none;
+  border-bottom: 1px solid #235c71;
+  background: #12303b;
+}
+
+.folderLink a:hover{
+  background: #1e5062;
+}
+
+.folderUrl.last{
+  border-bottom: none;
+}
+
+
+
+.folderIcon{
+display: inline-block;
+color: white;
+margin-right: 5px;
+margin-top: 10px;
+}
+
+
+.newButton{
+
+  text-decoration: none;
+  background-color: #008CBA;
+  font-size: 19px;
+  padding: 5px 10px;
+  border: none;
+  margin-bottom: 10px;
+  width: 150px;
+  height: 60px;
+}
+
+.newButton:hover{
+color: white;
+}
+
+#newWordBtn{
+  display: none;
+}
+
+#folderTextImput{
+width: 100%;
+
+padding: 2%;
+box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+background: #f5f5dc;
+}
+
+#folderSubmitBtn{
+  position: relative;
+  margin-left: 70%;
+}
+
+#submit_folder{
+  background-color: #46d246;
+  border: none;
+  color: white;
+  padding: 12px 30px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+#folder_name{
+border: 1px solid #ddd;
+}
+
+
+#noDeclensionsFound{
+  position: relative;
+  display: none;
+  margin-left: 10%;
+  width: 41%;
+  padding-left: 1%;
+  padding-right: 1%;
+  padding-top: 3%;
+  padding-bottom: 3%;
+  top: 100px;
+  z-index: 1500;
+  background-color: #ffbeb3;
+  color: #660f00;
+  border-radius: 10px;
+  font-size: 20px;
+  font-family: Helvetica;
+  transition: opacity 1s ease;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  min-width: 550px;
+  margin-bottom: 10px;
+}
+
+
+#deklinator{
+  position: relative;
+  display: inline-block;
+  margin-left: 10%;
+  width: 43%;
+  top: 100px;
+  z-index: 1500;
+  min-width: 560px;
+}
+
+#deklinator.hidden{
+  display: none;
+}
+
+
+#deklinatorBtn{
+  text-decoration: none;
+  background-color: #808080;
+  font-size: 19px;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 10px;
+  width: 100%;
+  height: 60px;
+
+  cursor: pointer;
+  color: white;
+}
+
+
+#deklinatorBtn:hover{
+  background-color:#4d4d4d;
+  color: white;
+  font-weight: bold;
+}
+
+
+#slovDruh{
+  display: inline-block;
+  margin-right: 20%;
+
+}
+
+
+
+
+
+
+#message{
+    position: absolute;
+    display: flex;
+    top: 5%;
+    width: 100%;
+    height: 40px;
+    vertical-align: middle;
+    line-height: 40px;
+    background: #dcdcdc;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+#message span{
+  position: relative;
+  display: block;
+  margin: 0 auto;
+  font-family: Helvetica;
+  font-size: 18px;
+}
+
+
+
+
+
+#entryForm.edit{
+  position: relative;
+  margin-top: 10%;
+  width: 40%;
+  left: 50%;
+  transform: translateX(-50%);
+
+}
+
+
+.hiddenFolder{
+display: none;
+}
+
+#searchBox {
+  position: relative;
+  display: none;
+  background-repeat: no-repeat;
+  width: 45%;
+  font-size: 16px;
+  padding: 5px;
+  border: none;
+  border-bottom: 1px solid #ddd;
+  margin-top: 15px;
+  margin-bottom: 12px;
+  min-width: 255px;
+  outline: none;
+}
+
+
+
+
+
+
+
+#vocInfoCont{
+  display: none;
+  position: relative;
+  width: 90%;
+  top: 30%;
+  left: 10%;
+  min-width: 600px;
+  transition: all 1s ease;
+
+
+}
+
+
+
+
+
+#vocabHead{
+width: 45%;
+height: 10%;
+background: #66b8ff;
+box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+border-radius: 5px;
+min-width: 400px;
+}
+
+#vocabHead p{
+
+display: inline-block;
+width: 40%;
+font-size: 20px;
+margin-left: 5%;
+
+
+}
+
+#VocabCont{
+display: inline-block;
+width: 45%;
+min-width: 400px;
+max-height: 450px;
+box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+overflow-y: scroll;
+
+margin-bottom: 20px;
+
+}
+
+
+      #VocabCont, #folderMenuWrap{
+        scrollbar-width: thin;
+        scrollbar-color: #d9d9d9 #09092a;
+      }
+
+
+
+
+      #VocabCont::-webkit-scrollbar, #folderMenuWrap::-webkit-scrollbar{
+        width: 12px;
+      }
+      #VocabCont::-webkit-scrollbar-track,   #folderMenuWrap::-webkit-scrollbar-track {
+        background: white;
+      }
+      #VocabCont::-webkit-scrollbar-thumb, #folderMenuWrap::-webkit-scrollbar-thumb {
+        background-color: #d9d9d9;
+        border-radius: 20px;
+        border: 3px solid #d9d9d9;
+      }
+
+
+
+#czVocabulary{
+    width: 100%;
+    border-collapse: collapse;
+}
+
+
+.czEnWord, .EnWord, .delColumn{
+  border: 2px solid white;
+
+  border-collapse: collapse;
+  padding: 10px;
+  padding-left: 25px;
+  font-size: 20px;
+  background: #e8effc;
+  cursor: pointer;
+  width: 40%;
+}
+
+.EnWord{
+  width: 30%;
+}
+
+
+.EnWord:hover + .delColumn .kos .threeDots{
+  color: #00bfff;
+}
+
+.EnWord.clicked{
+  font-weight: bold;
+  color: #0059b3;
+}
+
+
+.EnWord.clicked, .czEnWord.clicked{
+  font-weight: bold;
+  color: #0059b3;
+}
+
+
+.delColumn:hover .kos .threeDots{
+  color: #00bfff;
+}
+
+.delColumn{
+  width: 20%;
+  padding: 0px;
+  border-left: 3px solid #e8effc;
+  background: #e8effc;
+  overflow: hidden;
+}
+
+.kos a, i{
+  display: inline-block;
+
+}
+
+.upravIc, .vymazIc{
+  color: grey;
+}
+
+.upravIc:hover, .vymazIc:hover{
+  color: #0059b3;
+}
+
+
+.EnWord{
+  padding-left: 25px;
+}
+
+.threeDots{
+  position: relative;
+  color: gray;
+  display: inline-block;
+
+}
+
+
+
+.kos{
+position: relative;
+display: inline-block;
+left: 0px;
+height: 100%;
+width: 100%;
+background: #e8effc;
+}
+
+
+
+.kos a{
+display: inline-block;
+margin-left: 20px;
+margin-bottom: 10px;
+margin-top: 10px;
+}
+
+.kos .threeDots{
+  display: none;
+}
+
+.kos.hide a{
+display: none;
+}
+
+
+.kos.hide .threeDots{
+display: inline-block;
+left: 40%;
+}
+
+
+
+
+
+
+.czEnWord i{
+  position: relative;
+  color: gray;
+  float: right;
+  margin-left: 5px;
+  display: inline-block;
+}
+
+
+.czEnWord.showInf i{
+    color: #00bfff;
+}
+
+
+
+
+.czEnWord.showInf{
+  font-weight: bold;
+  background: #b3dbff;
+}
+
+.EnWord:hover .threeDots{
+  color: #00bfff;
+}
+
+
+
+.czEnWord:hover i{
+  color: #00bfff;
+}
+
+
+
+
+
+
+#infoCaption{
+  background: #b3b3b3;
+    width: 100%;
+    height: 35%;
+    font-size: 20px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.19);
+}
+
+
+#infoTable{
+  position: absolute;
+  margin-left: 50px;
+  display: none;
+  width: 60%;
+  min-width: 400px;
+  border-collapse: collapse;
+  font-size: 18px;
+
+}
+
+.infoRow{
+    width: 100%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+
+
+.wordInf{
+
+  border: 1px solid white;
+  border-collapse: collapse;
+  padding: 10px;
+  background: #f2f2f2;
+
+}
+
+.filled{
+  width: 40%;
+
+}
+
+
+
+@media only screen
+  and (min-device-width: 320px)
+  and (max-device-width: 667px)
+  and (min-device-height: 300px)
+  and (max-device-height: 900px)
+  and (orientation: portrait)
+  and (-webkit-min-device-pixel-ratio: 2) {
+
+    #infoTable{
+      position: relative;
+      margin-left: 15px;
+      display: none;
+      width: 40%;
+      min-width: 300px;
+      border-collapse: collapse;
+      font-size: 16px;
+    }
+
+
+    #vocInfoCont{
+      left: 10px;
+      min-width: 400px;
+
+    }
+
+    #vocabHead{
+    width: 45%;
+    min-width: 360px;
+    }
+
+
+
+    #VocabCont{
+
+    width: 45%;
+    min-width: 360px;
+    max-height: 450px;
+
+    }
+
+    #formWrapper{
+      margin-left: 15px;
+      min-width: 330px;
+    }
+
+    #entryForm{
+    min-width: 330px;
+    }
+
+
+    .nounsColumn, .adjColumn, .pronColumn{
+      height: 30%;
+      width: 35%;
+      max-width: 150px;
+      }
+
+
+
+
+      #nounsCases, #adjCases, #pronCases{
+          display: none;
+
+          width: 40%;
+          min-width: 300px;
+          position: relative;
+          padding-top: 5px;
+          border-top: 1px solid #ddd;
+          left: 50%;
+          transform: translateX(-50%);
+      }
+
+
+      .barLink span{
+        display: none;
+      }
+
+      #userFolders, #barNewFold, #barNewWord, .barLink.logout{
+
+        display: block;
+        border-radius: 50px;
+        margin-top: 5px;
+        margin-left: 10px;
+        padding: 5px 5px;
+        color: white;
+        width: 40px;
+        height: 40px;
+      }
+
+      .barLink.logout{
+      width: 70px;
+      }
+
+
+
+      #navBar{
+        height: 60px;
+        width: 100%;
+        min-width: 400px;
+        margin-bottom: 20px;
+      }
+
+      .barLink.first{
+        display: none;
+      }
+
+
+      #folderMenuWrap{
+        position: absolute;
+        top: 80px;
+        right: -5px;
+
+        width: 200px;
+      }
+
+      .folderLink a{
+        padding: 20px 36px;
+        font-size: 18px;
+      }
+
+      #allCont{
+      display: block;
+      margin: 0 auto;
+
+      width: 95%;
+      }
+
+
+      #incorrectNotif{
+      opacity: 0;
+      transition: all 1s ease;
+      left: 3%;
+      width: 95%;
+      }
+
+      .folderHeading{
+      position: relative;
+      left: 20%;
+      margin-top: 25%;
+      width: 62%;
+      height: 10%;
+      }
+
+
+
+
+
+      #instruction{
+        padding: 5px;
+        display: none;
+        width: 50%;
+        height: 40%;
+        min-width: 350px;
+          min-height: 350px;
+        position: absolute;
+        margin-top: 5%;
+        left: 60%;
+        top: 20%;
+        transform: translateX(-50%);
+        overflow: hidden;
+
+      }
+
+      #instrSlide{
+        position: relative;
+        height: 90%;
+        padding-top: 10%;
+        width: 90%;
+        min-height: 300px;
+        background: #99ccff;
+        transition: all 0.4s ease;
+        border-radius: 10px;
+        box-shadow: 5px 5px 5px grey;
+        font-family: Helvetica;
+        font-size: 18px;
+      }
+
+      #nextInfo{
+        position: relative;
+        display: block;
+        margin: 0 auto;
+        top: 5%;
+        width: 50px;
+        height: 50px;
+        cursor: pointer;
+      }
+
+      #instText{
+        position: relative;
+
+        left: 50%;
+        transform: translateX(-50%);
+        padding-left: 5%;
+        height: 60%;
+        width: 80%;
+        vertical-align: middle;
+        line-height: 100%;
+        background: #99ccff;
+
+        line-height: 30px;
+        text-align: left;
+      }
+
+
+
+
+      .highlight i{
+        color: #00bfff;
+        top: 30%;
+        transform: translateY(-30%);
+      }
+
+
+      .highlight span{
+      position: relative;
+      top: -30%;
+      }
+
+      #userFolders.highlight, #barNewFold.highlight, #barNewWord.highlight, #home.highlight{
+        font-size: x-large;
+        width: 60px;
+        height: 25px;
+        line-height: 25px;
+        vertical-align: middle
+      }
+
+      #entryForm.edit{
+        position: relative;
+        margin-top: 16%;
+        width: 40%;
+        left: 50%;
+        transform: translateX(-50%);
+        }
+
+
+        .pragueSil.index{
+          display: block;
+          position: fixed;
+          bottom: 0px;
+          width: 100%;
+          z-index: -1;
+        }
+
+        #deklinator{
+          width: 85%;
+          min-width: 330px;
+          margin-left: 15px;
+        }
+
+        #noDeclensionsFound{
+          width: 85%;
+          font-size: 20px;
+          min-width: 330px;
+          margin-left: 15px;
+        }
+
+
+
+  }

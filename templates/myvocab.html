@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}">
+    <script src="https://kit.fontawesome.com/24a527e4a1.js" crossorigin="anonymous"></script>
+
+    {% extends "base.html" %}
+</head>
+
+<body>
+
+
+{% block content %}
+
+
+<h1 class="folderHeading" ><i class="fas fa-folder-open"></i> {{folder}}</h1><br>
+<br>
+
+
+
+
+
+<div id="incorrectNotif">Wrong answer. Try again!</div>
+
+<div id="allCont">
+
+          <div id="practiceCont">
+              <p id="assignment"></p><br>
+          </div>
+
+          <br>
+
+          <div id="czechPart"></div><br>
+
+
+
+
+
+          <div id="answersContainer">
+            <div class="answerOption" onclick="checkAnswer(this)">none</div>
+            <div class="answerOption" onclick="checkAnswer(this)">none</div>
+            <div class="answerOption" onclick="checkAnswer(this)">none</div>
+            <div class="answerOption" onclick="checkAnswer(this)">none</div>
+            <div class="answerOption" onclick="checkAnswer(this)">none</div>
+            <div class="answerOption" onclick="checkAnswer(this)">none</div>
+            <div class="answerOption" onclick="checkAnswer(this)">none</div>
+
+            <div id="writtenAnsCont">
+              <input id="writtenAnswer"></input>
+              <button id="checkWrittenAns" onclick="checkAnswer(this)">Check</button>
+            </div>
+          </div>
+
+          <div id="nextQWrap">
+              <div id="nextQuest" onclick="nextQuestion()"> <font size="7"><i class="fas fa-arrow-alt-circle-right"></i></font></div>
+          </div>
+
+</div>
+
+
+
+
+
+<script>
+var barLink = document.querySelectorAll(".barLink")
+
+
+
+var home = document.getElementById("home")
+home.classList.add("visible")
+
+barLink[3].style.display = "none";
+barLink[2].style.display = "none";
+barLink[4].style.display = "none";
+
+
+
+
+
+
+
+</script>
+
+
+
+
+<script>{% include 'js/myvocab.js' %}</script>
+
+
+
+{% endblock %}
+
+
+
+</body>

@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}">
+        <script src="https://kit.fontawesome.com/24a527e4a1.js" crossorigin="anonymous"></script>
+          {% extends "base.html" %}
+</head>
+
+
+
+
+<body>
+{% block content %}
+
+
+
+
+
+
+
+
+
+
+      <form class="formEntry edit" id="entryForm" action="" method="post">
+
+      <div class="formBasicInf">
+            {{ form.hidden_tag() }}
+
+          {{ form.foldersHidden(size=20, value=entry_to_edit.voc_folder) }}
+            <p>
+
+              <span class="formLabels"><label for="folders">Folder:</label></span><br>
+              <select id="folders" name="folders">
+
+                <option class="folderOption" selected>...</option>
+
+                {% for element in all_user_folders %}
+
+
+                <option class="folderOption" value="{{element.folder_name}}">{{element.folder_name}}</option>
+
+                {% endfor %}
+
+              </select>
+
+                    <p class="engCzEntry">
+                      <span class="formLabels">{{ form.czech_entry.label }}</span><br>
+                      {{ form.czech_entry(size=20, value=entry_to_edit.czech_entry) }}
+                    </p>
+
+                    <p class="engCzEntry">
+                      <span class="formLabels">{{ form.english_entry.label }}</span><br>
+                      {{ form.english_entry(size=20, value=entry_to_edit.english_entry) }}
+                    </p>
+
+
+            <p>
+              <span class="formLabels">{{ form.word_class.label }}</span><br>
+              {{ form.word_class}}
+            </p>
+
+        </div>
+          <br>
+
+
+
+
+
+              <div id="nounsCases">
+
+                <p id="genderOptions"> {{form.noun_gender.label}}<br>
+                  {{form.noun_gender}}
+                </p>
+
+                  <div class="nounsColumn">
+                    <h3>Singular</h3>
+                    <p>
+                      {{form.noun_nominative.label}}<br>
+                      {{form.noun_nominative(value=entry_to_edit.noun_nominative)}}
+                    </p>
+
+                    <p>
+                      {{form.noun_genitive.label}}<br>
+                      {{form.noun_genitive(value=entry_to_edit.noun_genitive)}}
+                    </p>
+
+                    <p>
+                      {{form.noun_dative.label}}<br>
+                      {{form.noun_dative(value=entry_to_edit.noun_dative)}}
+                    </p>
+
+                    <p>
+                      {{form.noun_accusative.label}}<br>
+                      {{form.noun_accusative(value=entry_to_edit.noun_accusative)}}
+                    </p>
+
+                    <p>
+                      {{form.noun_vocative.label}}<br>
+                      {{form.noun_vocative(value=entry_to_edit.noun_vocative)}}
+                    </p>
+
+                    <p>
+                      {{form.noun_locative.label}}<br>
+                      {{form.noun_locative(value=entry_to_edit.noun_locative)}}
+                    </p>
+
+                    <p>
+                      {{form.noun_instrumental.label}}<br>
+                      {{form.noun_instrumental(value=entry_to_edit.noun_instrumental)}}
+                    </p>
+                  </div>
+
+                  <div class="nounsColumn">
+                    <h3>Plural</h3>
+                    <p>
+                      {{form.noun_pl_nominative.label}}<br>
+                      {{form.noun_pl_nominative(value=entry_to_edit.noun_pl_nominative)}}
+                    </p>
+
+                    <p>
+                      {{form.noun_pl_genitive.label}}<br>
+                      {{form.noun_pl_genitive(value=entry_to_edit.noun_pl_genitive)}}
+                    </p>
+
+                    <p>
+                      {{form.noun_pl_dative.label}}<br>
+                      {{form.noun_pl_dative(value=entry_to_edit.noun_pl_dative)}}
+                    </p>
+
+                    <p>
+                      {{form.noun_pl_accusative.label}}<br>
+                      {{form.noun_pl_accusative(value=entry_to_edit.noun_pl_accusative)}}
+                    </p>
+
+                    <p>
+                      {{form.noun_pl_vocative.label}}<br>
+                      {{form.noun_pl_vocative(value=entry_to_edit.noun_pl_vocative)}}
+                    </p>
+
+                    <p>
+                      {{form.noun_pl_locative.label}}<br>
+                      {{form.noun_pl_locative(value=entry_to_edit.noun_pl_locative)}}
+                    </p>
+
+                    <p>
+                      {{form.noun_pl_instrumental.label}}<br>
+                      {{form.noun_pl_instrumental(value=entry_to_edit.noun_pl_instrumental)}}
+                    </p>
+                </div>
+          </div>
+
+
+
+            <p id="entrySubmitBtn" >{{ form.submit() }}</p>
+          </form>
+
+
+
+<script>
+
+var edictDictObj = {{dict_for_edit | tojson}};
+
+var home = document.getElementById("home")
+home.classList.add("visible")
+
+var formBasicInf = document.querySelectorAll(".formBasicInf")
+formBasicInf[0].childNodes[1].id = "foldersHidden2"
+
+
+
+var barNewFold = document.getElementById("barNewFold")
+barNewFold.classList.add("disab")
+
+
+document.getElementById("nounsCases").style.display = "block"
+
+
+
+
+
+
+        folders.addEventListener("mouseup", function(){
+        formBasicInf[0].childNodes[1].value = folders.value;
+        });
+
+
+var classOptions = document.getElementById("word_class").childNodes
+
+var genderOptions = document.getElementById("noun_gender").childNodes
+
+var folderOptions = document.querySelectorAll(".folderOption")
+//vyresit jeste aby se ta value ulozila v hiddenInput
+
+
+for(let i=0, len = classOptions.length; i < len; i++ ){
+
+if(classOptions[i].textContent === edictDictObj['wordClass']){
+  classOptions[i].selected = true;
+  }
+}
+
+for(let i=0, len = genderOptions.length; i < len; i++ ){
+
+  if(genderOptions[i].textContent === edictDictObj['wordGender']){
+    genderOptions[i].selected = true;
+    }
+}
+
+for(let i=0, len = folderOptions.length; i < len; i++ ){
+
+  if(folderOptions[i].textContent === edictDictObj['vocFolder']){
+    folderOptions[i].selected = true;
+    formBasicInf[0].childNodes[1].value = folderOptions[i].textContent;
+    }
+}
+
+
+
+</script>
+
+
+{% endblock %}
+
+
+</body>
