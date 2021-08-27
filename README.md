@@ -4,6 +4,9 @@ It is aimed at helping learners of the Czech language to practice declensions of
 Czech has 7 declensions (nominative, genitive, dative, accusative, vocative, locative, instrumental) 
 Users can add nouns and adjectives in their profile and the app will generate exercises with those words.
 
+Appart from the basic CRUD operations, I have included a webcrawler script using the python library beautiful soup 
+to automatically extract data from wikipaedia dictionary
+
 Technology used:</br> 
     - Backend: PostgreSQL database and Python – Flask</br> 
     - Frontend: vanilla JS, HTML, CSS frontend   
