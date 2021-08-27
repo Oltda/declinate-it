@@ -14,7 +14,7 @@ Technology used:</br>
 # Creating Folders
 
 <p align="center">
-  <img src="https://github.com/Oltda/czech-declensions/blob/main/static/images/Slide2.JPG">
+  <img src="https://github.com/Oltda/declinate-it/blob/main/static/images/Slide2.JPG">
 </p>
 
 _________________________________________________________________________________________________________________________
@@ -32,19 +32,19 @@ ________________________________________________________________________________
 
 
 <p align="center">
-  <img src="https://github.com/Oltda/czech-declensions/blob/main/static/images/Slide6.JPG">
+  <img src="https://github.com/Oltda/declinate-it/blob/main/static/images/Slide6.JPG">
 </p>
 
 _________________________________________________________________________________________________________________________
 
 <p align="center">
-  <img src="https://github.com/Oltda/czech-declensions/blob/main/static/images/Slide7.JPG">
+  <img src="https://github.com/Oltda/declinate-it/blob/main/static/images/Slide7.JPG">
 </p>
 
 _________________________________________________________________________________________________________________________
 
 <p align="center">
-  <img src="https://github.com/Oltda/czech-declensions/blob/main/static/images/Slide8.JPG">
+  <img src="https://github.com/Oltda/declinate-it/blob/main/static/images/Slide8.JPG">
 </p>
 
 _________________________________________________________________________________________________________________________
